@@ -265,18 +265,18 @@ void main() {
   - ```rotate``` Function: Rotates the texture coordinates to create the distortion effect.
   - Color Adjustment: Reduces the brightness of pixels near the black hole to simulate the gravitational deepening effect.
 
-## Executando o Projeto
+## Project Execution
 
-Para executar a simulação localmente, siga os passos abaixo:
+To execute the simulation locally, follow the steps:
 
    1. Clone the Repository:
 ```
-git clone https://github.com/seu-usuario/simulacao-buraco-negro.git
+git clone https://github.com/pecanela/Visual-Black-Hole-Simulation.git
 ```
 
    2. Navigate to the Project Directory:
 ```
-cd simulacao-buraco-negro
+cd Visual-Black-Hole-Simulation
 ```
 
    3. Start a Local Server: 
@@ -620,12 +620,12 @@ Para executar a simulação localmente, siga os passos abaixo:
 
    1. Clone o Repositório:
 ```
-git clone https://github.com/seu-usuario/simulacao-buraco-negro.git
+git clone https://github.com/pecanela/Visual-Black-Hole-Simulation.git
 ```
 
    2. Navegue até o Diretório do Projeto:
 ```
-cd simulacao-buraco-negro
+cd Visual-Black-Hole-Simulation
 ```
 
    3. Inicie um Servidor Local:
