@@ -337,8 +337,7 @@ python -m http.server 8000
   -  [Teoria da Relatividade Geral - Wikipédia](https://pt.wikipedia.org/wiki/Relatividade_geral)
 
 ## Licença
-
 Este projeto está licenciado sob os termos da licença MIT. Veja o arquivo LICENSE para mais informações.
 
-
-Esperamos que você aproveite esta simulação e que ela proporcione insights sobre os fascinantes efeitos dos buracos negros no espaço-tempo. Sinta-se à vontade para contribuir, sugerir melhorias ou adaptar o código para seus próprios projetos.
+--- 
+Espero que você aproveite esta simulação e que ela proporcione insights sobre os fascinantes efeitos dos buracos negros no espaço-tempo. Sinta-se à vontade para contribuir, sugerir melhorias ou adaptar o código para seus próprios projetos.
