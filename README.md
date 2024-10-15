@@ -335,7 +335,7 @@ In the ```script.js``` file, modify the ```blackholeMass``` variable to change t
   -  [Black Hole Simulation in JavaScript by Cliff Crosland](https://cliffcrosland.com/posts/black-hole-js/)
   -  [General Theory of Relativity - Wikipedia](https://pt.wikipedia.org/wiki/Relatividade_geral)
 
-## Licença
+## License
 This project is licensed under the terms of the MIT license. See the LICENSE file for more details.
 
 --- 
