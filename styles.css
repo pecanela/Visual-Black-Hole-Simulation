@@ -1,0 +1,15 @@
+/* Remove default margins and padding, set height, background color, and hide overflow */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000; /* Set background color to black */
+  overflow: hidden;       /* Hide scrollbars */
+}
+
+/* Make the canvas fill the entire viewport */
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

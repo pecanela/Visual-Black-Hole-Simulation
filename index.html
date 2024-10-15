@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br"> <!-- Set the language to Brazilian Portuguese -->
+<head>
+  <meta charset="UTF-8"> <!-- Define the character encoding as UTF-8 -->
+  <title>Visual Black Hole Simulation</title> <!-- Title of the page: "Simulação visual de Buraco Negro" -->
+  <!-- Include a CSS reset to ensure consistent styling across browsers -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Canvas element where the WebGL content will be rendered -->
+  <canvas id="glscreen"></canvas>
+
+  <!-- Vertex Shader Script -->
+  <script id="2d-vertex-shader" type="x-shader/x-vertex">
+    attribute vec2 a_position;   // Attribute for vertex positions
+    attribute vec2 a_texCoord;   // Attribute for texture coordinates
+
+    varying vec2 v_texCoord;     // Varying variable to pass texture coordinates to the fragment shader
+    void main() {
+      gl_Position = vec4(a_position, 0, 1); // Set the position of each vertex
+      v_texCoord = a_texCoord;              // Pass texture coordinates to the fragment shader
+    }
+  </script>
+
+  <!-- Fragment Shader Script -->
+  <script id="2d-fragment-shader" type="x-shader/x-fragment">
+    precision mediump float; // Set the precision for floating point numbers
+
+    uniform sampler2D u_image; // Uniform sampler for the texture image
+    varying vec2 v_texCoord;   // Varying texture coordinates from the vertex shader
+
+    uniform vec2 u_resolution; // Uniform variable for the canvas resolution
+    uniform vec2 u_mouse;      // Uniform variable for the mouse position
+    uniform float u_mass;      // Uniform variable for the mass (affects distortion)
+    uniform float u_time;      // Uniform variable for the elapsed time
+
+    const float PI = 3.14159265359; // Constant value for PI
+
+    // Function to rotate a point around a center point by a given angle
+    vec2 rotate(vec2 mt, vec2 st, float angle){
+      float cosVal = cos(angle * PI); // Calculate cosine of the angle
+      float sinVal = sin(angle * 0.0); // Calculate sine of the angle (always zero here)
+
+      float nx = (cosVal * (st.x - mt.x)) + (sinVal * (st.y - mt.y)) + mt.x; // New x-coordinate after rotation
+      float ny = (cosVal * (st.y - mt.y)) - (sinVal * (st.x - mt.x)) + mt.y; // New y-coordinate after rotation
+      return vec2(nx, ny); // Return the rotated coordinates
+    }
+
+    void main() {
+      vec2 st = v_texCoord;             // Current texture coordinate
+      vec2 mt = u_mouse / u_resolution; // Normalize mouse position to [0, 1]
+
+      float dx = st.x - mt.x; // Difference in x between the point and the mouse
+      float dy = st.y - mt.y; // Difference in y between the point and the mouse
+
+      float dist = sqrt(dx * dx + dy * dy); // Calculate distance to the mouse
+      float pull = u_mass / (dist * dist);   // Gravitational pull effect
+
+      vec3 color = vec3(0.0); // Initialize color vector
+
+      vec2 r = rotate(mt, st, pull);        // Rotate the point based on the pull
+      vec4 imgcolor = texture2D(u_image, r); // Sample the texture at the rotated coordinate
+      color = imgcolor.rgb - vec3(pull * 0.25); // Darken the color based on the pull
+
+      gl_FragColor = vec4(color, 1.0); // Set the final fragment color
+    }
+  </script>
+
+  <!-- External JavaScript file -->
+  <script src="./script.js"></script>
+</body>
+</html>
