@@ -343,9 +343,23 @@ I hope you enjoy this simulation and that it provides insights into the fascinat
 
 
 
+
+
+
+
+
+
 ---
 
-# Simulação Visual de Buraco Negro
+
+
+
+
+
+
+
+
+# Simulação Visual de Buraco Negro - Português
 
 Bem-vindo à Simulação Visual de Buraco Negro, um projeto interativo que demonstra os efeitos gravitacionais de um buraco negro em uma página web. Nesta simulação, o cursor do mouse atua como um buraco negro, distorcendo o fundo estelar à medida que você o move pela tela, proporcionando uma experiência visualmente impressionante que simula a curvatura do espaço-tempo.
 ### Índice
