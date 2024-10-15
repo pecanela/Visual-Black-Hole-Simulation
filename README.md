@@ -3,7 +3,8 @@
 Bem-vindo à Simulação Visual de Buraco Negro, um projeto interativo que demonstra os efeitos gravitacionais de um buraco negro em uma página web. Nesta simulação, o cursor do mouse atua como um buraco negro, distorcendo o fundo estelar à medida que você o move pela tela, proporcionando uma experiência visualmente impressionante que simula a curvatura do espaço-tempo.
 ### Índice
 
-- [Ilustração](#ilustração)
+- [Demonstração](#Demonstração)
+- [Projeto](#projeto)
 - [Introdução](#introdução)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Como Funciona](#como-funciona)
@@ -19,9 +20,12 @@ Bem-vindo à Simulação Visual de Buraco Negro, um projeto interativo que demon
 - [Referências](#referências)
 - [Licença](#licença)
 
-### Ilustração
+### Demonstração
 
-![Screenshot da Aplicação](imagens/screenshot.png "Tela Inicial da Aplicação")
+![Demonstração da Aplicação](demo_gif.gif "Funcionamento da Aplicação")
+
+### Projeto
+```https://visual-black-hole-simulation.vercel.app/```
 
 ### Introdução
 
