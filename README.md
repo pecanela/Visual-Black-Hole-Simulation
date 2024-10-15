@@ -25,7 +25,7 @@ Bem-vindo à Simulação Visual de Buraco Negro, um projeto interativo que demon
 ![Demonstração da Aplicação](demo_gif.gif "Funcionamento da Aplicação")
 
 ### Projeto
-```https://visual-black-hole-simulation.vercel.app/```
+[Simulação Visual de Buraco Negro](https://visual-black-hole-simulation.vercel.app/)
 
 ### Introdução
 
